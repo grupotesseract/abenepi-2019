@@ -8,6 +8,13 @@
 
 The Rest of the tools will run from inside the containers.
 
+## Clone the repository
+
+```
+git clone https://github.com/grupotesseract/abenepi-2019.git
+cd abenepi-2019
+```
+
 ## Setup
 
 ```
