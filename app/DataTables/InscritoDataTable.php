@@ -67,24 +67,7 @@ class InscritoDataTable extends DataTable
         return [
             'nome',
             'compareceu',
-            'pagou',
-            'cidade',
-            'estado',
-            'cpf',
-            'profissao',
-            'endereco',
-            'bairro',
-            'numero',
-            'complemento',
-            'cep',
-            'email',
-            'senha',
-            'cidade',
-            'estado',
-            'telefone',
-            'nascimento',
-            'valor',
-            'created_at'
+            'pagou',          
         ];
     }
 
