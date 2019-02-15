@@ -14,8 +14,8 @@ class UsersTableSeeder extends Seeder
         try {
             factory(App\User::class)->create([
                     "name" => "Admin",
-                    "email" => "sao.paulo@abenepi.org.br",
-                    "password" => bcrypt(env('ADMIN_PWD', '123456'))]
+                    "email" => "admin@abenepi.com.br",
+                    "password" => bcrypt(env('ADMIN_PWD', '123321'))]
             );
         } catch (\Illuminate\Database\QueryException $exception) {
 
