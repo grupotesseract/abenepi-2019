@@ -1,13 +1,17 @@
 // Home -> Regras específicas da Home.
 
+body {
+  background-color: $secondary;
+}
+
 // Header
 header {
-	background-image: url("https://res.cloudinary.com/tesseract/image/upload/f_auto,q_auto/v1531876306/abenepi2/bg-desktop.jpg");
+	background-image: url("https://res.cloudinary.com/tesseract/image/upload/v1550613608/abenepi-2019/roda-criancas.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
 
-  padding-top: 61px;
+  margin-top: 61px;
 
   .logo-header {
     display: flex;
@@ -23,48 +27,42 @@ header {
 
   .box-header {
     color: white;
+    width: 100%;
+
     p {
       font-size: 1.5rem;
     }
     h1 {
-      font-size: 5rem;
-    }
-
-    @include media-breakpoint-down(md)  {
-      width: 100%;
-      h1 {
-        display: none;
-      }
+      font-size: 5.2rem;
     }
 
     div {
-      width: 80%;
-      background-color: rgba($primary, .8);
-      padding: 3rem 0;
+      width: 35rem;
+      background-color: rgba($primary, .9);
+      padding: 3rem 1rem;
       margin: 5rem auto;
+      text-align: center;
+
       img {
         display: none;
       }
+
       @include media-breakpoint-down(md)  {
+        margin: 3rem 0;
+        width: 100%;
+
+        h1 {
+          font-size: 3rem;
+        }
+
+        p {
+          font-size: 1.2rem;
+        }
+
         img {
           display: block;
           width: 100%;
           padding: 0 2rem;
-        }
-        margin: 3rem 0;
-      }
-      text-align: center;
-
-      @include media-breakpoint-down(md)  {
-        width: 100%;
-        p {
-          &:nth-child(2) {
-            display: none;
-          }
-
-          &:last-child {
-            font-size: 1.3rem;
-          }
         }
       }
 

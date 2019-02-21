@@ -1,5 +1,5 @@
 <div class="container infraestrutura" id="infraestrutura">
-	<h1 class="text-center mb-4">Infraestrutura</h1>
+	<h1 class="text-center mt-5 mb-4">Infraestrutura</h1>
 
 	<div class="row mb-5">
 		<div class="col-12 col-lg-6">
@@ -10,6 +10,7 @@
 			<p><span>Local: </span>CENACON - Hotel Nacional Inn</p>
 			<p><span>Endereço: </span>Av. Getúlio Vargas, 2330 - Recreio São Judas Tadeu, São Carlos - SP, 13571-271</p>
 			<p><span>Telefone: </span>(16) 3363-0200</p>
+			<p><span>Email: </span>saocarlosabenepi@gmail.com</p>
 
 			<a href="https://drive.google.com/open?id=1yvlvvhe2VqQQr-qTyIewgB9J4Yhgz9AK" target="_blank">
 				<button type="button" class="btn btn-primary"><i class="fas fa-arrow-circle-down"></i> Hotéis, Táxis e Restaurantes</button>

@@ -112,7 +112,7 @@
 
                 <div class="col-12 col-lg-6 mb-2">
                     <label id="label_form" for="estado" class="control-label">Estado</label>
-                    <input type="text" class="form-control" maxlength="2" placeholder="SP" name="estado" value="{{ old('estado') }}" required="required">
+                    {{-- <input type="text" class="form-control" maxlength="2" placeholder="SP" name="estado" value="{{ old('estado') }}" required="required"> --}}
                     {{ Form::select('estado', [
                         'AC'=>'Acre',
                         'AL'=>'Alagoas',
@@ -226,15 +226,20 @@
         </div>{{-- End Form-Group --}}
     </form>
 
-	<h5> Inscrições pelo site encerradas </h5>
-    <h5> Inscrições disponível somente no dia do evento </h5>
+	{{-- <h5> Inscrições pelo site encerradas </h5>
+    <h5> Inscrições disponível somente no dia do evento </h5> --}}
 
-    <p> A Comissão Organizadora reserva-se ao direito de aceitar somente as inscrições realizadas dentro do prazo e de encerrar as inscrições assim que todas as vagas forem preenchidas. </p>
+    <p>Ao Núcleo São Carlos da Abenepi fica reservado o direito de aceitar somente as inscrições realizadas dentro do prazo e encerrá-las assim que todas as vagas forem preenchidas.</p>
 
-    <p>Em caso de dúvidas, entrar em contato com <span>abenepi.saopaulo@gmail.com</span></p>
-    <h1 class="text-center mb-4">Gerar Nova Guia de Pagamento</h1>
+    <p>Política de devolução do valor da inscrição: O pedido deve ser feito por email e será devolvido 85% do valor.</p>
 
-   {{--  <form action="{{url('/emissaoPagamento')}}" method="post">
+    <p>Prazo para solicitação: <span>12/05/2019</span></p>
+
+    <p>Em caso de dúvidas, entrar em contato com o email: <span>saocarlosabenepi@gmail.com</span></p>
+
+    {{-- <h1 class="text-center mb-4">Gerar Nova Guia de Pagamento</h1> --}}
+
+    {{--  <form action="{{url('/emissaoPagamento')}}" method="post">
         @csrf
 
         @if ($errors->any())

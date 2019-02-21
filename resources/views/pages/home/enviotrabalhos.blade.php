@@ -1,11 +1,11 @@
 <div class="container enviotrabalhos" id="enviotrabalhos">
 	<h1 class="text-center">Envio de Trabalhos</h1>
 
-    <h1 class="text-center">ATENÇÃO - PRAZO ENCERRADO</h1>
+    {{-- <h1 class="text-center">ATENÇÃO - PRAZO ENCERRADO</h1> --}}
 
     <p class="mb-4">Poderão ser inscritos trabalhos na modalidade pôster que constituirá na apresentação oral para um avaliador da Comissão Científica, no salão de exposição de pôsteres.</p>
 
-    <p class="mb-4">O resumo deverá ser encaminhado para o e-mail: <span>abenepi.saopaulo@gmail.com</span></p>
+    <p class="mb-4">O resumo deverá ser encaminhado para o e-mail: <span>saocarlosabenepi@gmail.com</span></p>
 
     <p class="mb-4">O autor principal (primeiro autor) deverá ser o responsável pelo envio e apresentação do trabalho e estar obrigatoriamente inscrito no Congresso (no momento da submissão). O autor principal poderá inscrever até três trabalhos, no entanto, poderá participar como coautor em outros trabalhos. Na submissão do trabalho deverá ser informado o endereço eletrônico completo do autor apresentador, para correspondência e contatos durante o Congresso.</p>
 
