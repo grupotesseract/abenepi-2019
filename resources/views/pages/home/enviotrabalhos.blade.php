@@ -13,8 +13,8 @@
 
     <p class="mb-4">A entrega do certificado está condicionada à apresentação do trabalho. Será conferido um certificado por trabalho exposto, contendo os nomes de todos os autores.</p>
 
-    <p class="mb-4">Data Limite para Envio: 24/08/2018</p>
-    <p class="mb-4">Respostas da seleção dos trabalhos: 07/09/2018</p>
+    <p class="mb-4">Data Limite para Envio: 16/05/2019</p>
+    <p class="mb-4">Respostas da seleção dos trabalhos: 17/05/2019</p>
     <div class="text-center col-12 mt-3 mb-5">
         <a href="https://drive.google.com/file/d/1JeCOuo8UsQNmc-den-ahrFY0FND0y32S/view?usp=sharing" target="_blank">
             <button type="button" class="btn btn-primary"><i class="fas fa-arrow-circle-down"></i> Normas para Envio</button>

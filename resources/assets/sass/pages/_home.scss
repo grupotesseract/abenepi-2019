@@ -147,12 +147,12 @@ header {
   .logo {
     height: 100%;
     width: 100%;
-    display: flex;
+    // display: flex;
     @include media-breakpoint-down(md) { display: block }
 
     img {
       width: 100%;
-      margin: auto;
+      margin: 0 auto;
       @include media-breakpoint-down(md) { margin: 0 auto 2rem }
       display: block;
     }
