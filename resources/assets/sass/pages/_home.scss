@@ -265,3 +265,68 @@ header {
     border-radius: 10px;
   }
 }
+
+footer {
+  height: 150px;
+  width: 100%;
+  position: relative;
+  background-image: url("https://res.cloudinary.com/tesseract/image/upload/v1550613607/abenepi-2019/desenho-footer.jpg");
+  background-repeat: repeat;
+  background-position: left;
+  background-size: contain;
+  @include media-breakpoint-down(md) {
+    background-size: cover;
+  }
+
+  div {
+    position: absolute;
+    height: 600px;
+    width: 295px;
+    @include media-breakpoint-down(md) {
+      height: 200px;
+      width: 98px;
+    }
+    bottom: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .crianca-esquerda {    
+    left: 0px;
+    background-image: url("https://res.cloudinary.com/tesseract/image/upload/v1550613610/abenepi-2019/crianca-esquerda.png");
+    background-position: left;
+  }
+
+  .crianca-direita {    
+    right: 0px;
+    background-image: url("https://res.cloudinary.com/tesseract/image/upload/v1550613608/abenepi-2019/crianca-direita.png");
+    background-position: right;
+  }
+}
+
+.palestrantes {
+  margin-top: 8rem;
+
+  .foto-box {
+    margin: 2rem auto;
+
+    div {
+      margin: 0 auto;
+      width: 300px;
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        border: 3px solid $primary;
+        border-radius: 5px;
+      }
+
+      h3 {
+        margin: 1rem auto;
+      }
+    }
+  }
+}

@@ -19,7 +19,7 @@
     	<div class="palestra">
 	    	<h2>8:45 às 9:30</h2>
 	    	<h5>Sinais precoces do TEA em crianças de até 2 anos</h5>
-	    	<p>Dr. Silvyo Giffoni – DISAPRE/UNICAMP</p>
+	    	<p>Dr. Silvyo Giffoni</p>
     	</div>
 
     	<div class="palestra">
@@ -47,7 +47,7 @@
     	<div class="palestra">
 	    	<h2>13:30 às 15:00</h2>
 	    	<h5>Estimulação dos pré-requisitos do processo de alfabetização: Como maximizar as potencialidades das crianças</h5>
-	    	<p>Drª Thais Freire – GREPEL/FOB - USP</p>
+	    	<p>Dra. Thais Freire</p>
     	</div>
 
     	<div class="palestra">
@@ -63,8 +63,9 @@
     </div>
 
     <div class="text-center col-12 mt-3 mb-5">
-        <a href="https://drive.google.com/file/d/0ByHImjXbPN_eUmp4Ny03aTJ1OFpEdTdWWWFyeFZkTHJ1X2sw/view?usp=sharing" target="_blank">
-            <button type="button" class="btn btn-primary"><i class="fas fa-arrow-circle-down"></i> Currículo Palestrantes</button>
+        <a href="/palestrantes" target="_blank">
+            <button type="button" class="btn btn-primary"><i class="fas fa-arrow-circle-right"></i> Currículo Palestrantes</button>
         </a>
     </div>
+  </div>
 </div>

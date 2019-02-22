@@ -163,18 +163,22 @@
                 </div>
 
                 <div class="col-12 col-lg-6 mb-3">
-                    <input type="radio" onclick='$(".data_inscrito").hide();' id="valor1" name="valor" value="220" @if(old('valor') == 220) checked @endif>
+                    <input type="radio" id="valor1" name="valor" onclick='$(this).val(220);'>
                     <label for="valor1">Profissionais e outros: R$220,00</label>
                 </div>
 
                 <div class="col-12 col-lg-6 mb-3">
-                    <input type="radio" onclick='$(".data_inscrito").hide();' id="valor2" name="valor" value="170" @if(old('valor') == 170) checked @endif>
+                    <input type="radio" id="valor2" name="valor" onclick='$(this).val(170);'>
                     <label for="valor2">Sócios quites ABENEPI: R$170,00</label>
                 </div>
 
                 <div class="col-12 col-lg-6 mb-3">
-                    <input type="radio" onclick='$(".data_inscrito").hide();' id="valor3" name="valor" value="170" @if(old('valor') == 170) checked @endif>
-                    <label for="valor2">Estudantes (Graduação e Pós-Graduação): R$170,00</label>
+                    <input type="radio" id="valor3" name="valor" onclick='$(this).val(170); $(".comprovante").css("display", "block");'>
+                    <label for="valor3">Estudantes (Graduação e Pós-Graduação): R$170,00</label>
+                </div>
+
+                <div class="col-12 mb-3 comprovante" style="display: none;">
+                    <button type="file" id="file" name="comprovante" accept="image/*,.pdf" class="btn btn-primary"><i class="fas fa-file-export"></i> Anexar Comprovante</button>
                 </div>
 
                 <div class="text-center col-12 mt-3 mb-5">

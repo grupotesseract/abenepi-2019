@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('pages.home');
 });
 
+Route::get('/palestrantes', function () {
+    return view('pages.palestrantes');
+});
+
 Auth::routes();
 
 Route::get('/admin', 'AdminController@index');
