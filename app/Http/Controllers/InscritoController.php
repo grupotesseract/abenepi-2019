@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Storage;
 
 
 use \App\PagSeguroModel as PagSeguroModel;
-use Hamcrest\Core\IsNull;
+
 
 class InscritoController extends AppBaseController
 {
