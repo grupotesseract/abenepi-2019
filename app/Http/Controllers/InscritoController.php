@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Storage;
 
 use \App\PagSeguroModel as PagSeguroModel;
 
+
 class InscritoController extends AppBaseController
 {
     /** @var  InscritoRepository */
@@ -165,9 +166,10 @@ class InscritoController extends AppBaseController
     {
         
         $input = $request->all();                
-        $arquivo = Storage::putFile('comprovantes', $request->file('comprovante'), 'public');
-        
-        $input['comprovante'] = $arquivo;        
+        if (!is_null($request->file('comprovante'))) {
+            $arquivo = Storage::putFile('comprovantes', $request->file('comprovante'), 'public');
+            $input['comprovante'] = $arquivo;        
+        }        
 
         $inscrito = $this->inscritoRepository->create($input);
 
@@ -226,5 +228,18 @@ class InscritoController extends AppBaseController
         Flash::success('Inscrito atualizado com sucesso.');
 
         return redirect(route('inscritos.index'));
+    }
+
+    public function downloadComprovante($id)
+    {
+        $inscrito = $this->inscritoRepository->findWithoutFail($id);
+        
+        if (!is_null($inscrito->comprovante)) {
+            $comprovante = storage_path('app/'.$inscrito->comprovante);
+            return response()->download($comprovante);
+        } else {
+            Flash::error('Inscrito não possui comprovante inserido');
+            return redirect(route('inscritos.index'));
+        }
     }
 }
