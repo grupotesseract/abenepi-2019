@@ -34,5 +34,5 @@ Route::get('/home', 'HomeController@index');
 Route::post('inscricao', 'InscritoController@inscricao');
 Route::post('emissaoPagamento', 'InscritoController@emissaoPagamento');
 
-Route::get('/atualizapago/{idInscrito}', 'InscritoController@atualizaPagou');
-Route::get('/atualizacompareceu/{idInscrito}', 'InscritoController@atualizaCompareceu');
+Route::get('/atualizapago/{idInscrito}', 'InscritoController@atualizaPagou')->name('inscritos.pagou');
+Route::get('/atualizacompareceu/{idInscrito}', 'InscritoController@atualizaCompareceu')->name('inscritos.compareceu');
