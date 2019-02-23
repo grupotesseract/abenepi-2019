@@ -7,7 +7,7 @@ use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Mail;
-use App\Models\TextosCubo;
+use App\Models\Inscrito;
 
 class PagSeguroNotification extends Notification
 {
@@ -69,10 +69,15 @@ class PagSeguroNotification extends Notification
      */
     public static function pagseguro($information)
     {
-        $response = PagSeguroNotification::setResponse($information);
+        $response = PagSeguroNotification::setResponse($information);        
+        \Log::info('Transação de '.$response['name'].' foi '.$response['status_transacao']);        
+        
+        $pagou = $response['status_transacao'] == 'paga';       
+        $inscrito = Inscrito::find($response['id']);
+        $inscrito->pagou = $pagou;
+        $inscrito->save();
 
-        $pagou = $response['status_transacao'] == 'paga';
-        \Log::info($response);        
+        
     }
 
     public static function setResponse($information)
@@ -90,8 +95,8 @@ class PagSeguroNotification extends Notification
         ];
 
         foreach ($information->getItems() as $item) {
-            $id_cubo = $item->getId();
-            $response['id_cubo'] = $id_cubo;
+            $id = $item->getId();
+            $response['id'] = $id;
         }
 
         return $response;
