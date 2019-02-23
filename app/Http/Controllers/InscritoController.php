@@ -11,6 +11,7 @@ use Flash;
 use App\Http\Controllers\AppBaseController;
 use Response;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 
 use \App\PagSeguroModel as PagSeguroModel;
@@ -162,7 +163,11 @@ class InscritoController extends AppBaseController
      */
     public function inscricao(CreateInscritoRequest $request)
     {
-        $input = $request->all();
+        
+        $input = $request->all();                
+        $arquivo = Storage::putFile('comprovantes', $request->file('comprovante'), 'public');
+        
+        $input['comprovante'] = $arquivo;        
 
         $inscrito = $this->inscritoRepository->create($input);
 
@@ -183,5 +188,43 @@ class InscritoController extends AppBaseController
         }
         else
             Flash::success('Favor, verifique seu CPF');
+    }
+
+    public function atualizaPagou($id)
+    {
+        $inscrito = $this->inscritoRepository->findWithoutFail($id);
+
+        if (empty($inscrito)) {
+            Flash::error('Inscrito não encontrado');
+
+            return redirect(route('inscritos.index'));
+        }
+        
+        $pagou = ($inscrito->pagou == 'Não Pagou' ? true : false);
+        $inscrito->pagou = $pagou;
+        $inscrito->save();               
+
+        Flash::success('Inscrito atualizado com sucesso.');
+
+        return redirect(route('inscritos.index'));
+    }
+
+    public function atualizaCompareceu($id)
+    {
+        $inscrito = $this->inscritoRepository->findWithoutFail($id);
+
+        if (empty($inscrito)) {
+            Flash::error('Inscrito não encontrado');
+
+            return redirect(route('inscritos.index'));
+        }
+
+        $compareceu = ($inscrito->compareceu == 'Não Compareceu' ? true : false);
+        $inscrito->compareceu = $compareceu;
+        $inscrito->save(); 
+
+        Flash::success('Inscrito atualizado com sucesso.');
+
+        return redirect(route('inscritos.index'));
     }
 }
