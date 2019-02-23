@@ -33,8 +33,8 @@ class CreateInscritosTable extends Migration
             $table->string('nascimento');
             $table->decimal('valor',10,2);
             $table->string('dia_inscrito')->nullable();
-            $table->timestamps();
-            $table->softDeletes();
+            $table->string('comprovante')->nullable();
+            $table->timestamps();           
         });
     }
 

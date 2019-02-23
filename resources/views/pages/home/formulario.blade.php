@@ -36,9 +36,9 @@
 	</div>
 
 
-    <form action="{{url('/inscricao')}}" method="post">
+    <form action="{{url('/inscricao')}}" method="post" enctype="multipart/form-data" >
         @csrf
-        <input type="hidden" name="compareceu" value="false">
+        <input type="hidden" name="compareceu" value="true">
         <input type="hidden" name="pagou" value="false">
 
         @if ($errors->any())
@@ -163,22 +163,23 @@
                 </div>
 
                 <div class="col-12 col-lg-6 mb-3">
-                    <input type="radio" id="valor1" name="valor" onclick='$(this).val(220);'>
+                    <input type="radio" id="valor1" name="valor" onclick='$(this).val(220); $(".comprovante").css("display", "none"); $("#comprovante").attr("required", false);'>
                     <label for="valor1">Profissionais e outros: R$220,00</label>
                 </div>
 
                 <div class="col-12 col-lg-6 mb-3">
-                    <input type="radio" id="valor2" name="valor" onclick='$(this).val(170);'>
+                    <input type="radio" id="valor2" name="valor" onclick='$(this).val(170); $(".comprovante").css("display", "none"); $("#comprovante").attr("required", false);'>
                     <label for="valor2">Sócios quites ABENEPI: R$170,00</label>
-                </div>
+                </div>               
 
                 <div class="col-12 col-lg-6 mb-3">
-                    <input type="radio" id="valor3" name="valor" onclick='$(this).val(170); $(".comprovante").css("display", "block");'>
+                    <input type="radio" id="valor3" name="valor" onclick='$(this).val(170); $(".comprovante").css("display", "block"); $("#comprovante").attr("required", true);'>
                     <label for="valor3">Estudantes (Graduação e Pós-Graduação): R$170,00</label>
                 </div>
 
                 <div class="col-12 mb-3 comprovante" style="display: none;">
-                    <button type="file" id="file" name="comprovante" accept="image/*,.pdf" class="btn btn-primary"><i class="fas fa-file-export"></i> Anexar Comprovante</button>
+                    <label for="comprovante">Por favor, anexe comprovante de estudante</label>
+                    <input type="file" id="comprovante" name="comprovante">                    
                 </div>
 
                 <div class="text-center col-12 mt-3 mb-5">
