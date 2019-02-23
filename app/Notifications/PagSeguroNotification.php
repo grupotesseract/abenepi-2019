@@ -75,9 +75,7 @@ class PagSeguroNotification extends Notification
         $pagou = $response['status_transacao'] == 'paga';       
         $inscrito = Inscrito::find($response['id']);
         $inscrito->pagou = $pagou;
-        $inscrito->save();
-
-        
+        $inscrito->save();        
     }
 
     public static function setResponse($information)
