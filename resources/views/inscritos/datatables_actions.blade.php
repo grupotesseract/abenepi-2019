@@ -3,9 +3,9 @@
     <a href="{{ route('inscritos.show', $id) }}" class='btn btn-default btn-xs'>
         <i class="glyphicon glyphicon-eye-open"></i>
     </a>
-    <a href="{{ route('inscritos.edit', $id) }}" class='btn btn-default btn-xs'>
+    {{-- <a href="{{ route('inscritos.edit', $id) }}" class='btn btn-default btn-xs'>
         <i class="glyphicon glyphicon-edit"></i>
-    </a>
+    </a> --}}
     <a href="{{ route('inscritos.pagou', $id) }}" class='btn btn-default btn-xs'>
         <i class="glyphicon glyphicon-usd"></i>
     </a>
