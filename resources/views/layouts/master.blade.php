@@ -3,9 +3,15 @@
 	@include('layouts.head')
 
 	<body>
-		@include('layouts.nav')
+		@if (Request::is('/'))
+			@include('layouts.nav-home')
+		@else
+			@include('layouts.nav')
+		@endif
 
 		@yield('content')
+
+		@include('layouts.footer')
 
 		@include('layouts.scripts')
 	</body>
