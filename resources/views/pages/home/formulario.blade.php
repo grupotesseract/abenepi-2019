@@ -85,11 +85,6 @@
                 </div>
 
                 <div class="col-12 col-lg-3 mb-2">
-                    <label id="label_form" for="bairro" class="control-label">Bairro</label>
-                    <input type="text" class="form-control" name="bairro" value="{{ old('bairro') }}" required="required">
-                </div>
-
-                <div class="col-12 col-lg-3 mb-2">
                     <label id="label_form" for="numero" class="control-label">Número</label>
                     <input type="text" class="form-control" name="numero" value="{{ old('numero') }}" required="required">
                 </div>
@@ -97,6 +92,11 @@
                 <div class="col-12 col-lg-3 mb-2">
                     <label id="label_form" for="complemento" class="control-label">Complemento (opcional)</label>
                     <input type="text" class="form-control" name="complemento" value="{{ old('complemento') }}" maxlength="20">
+                </div>
+
+                <div class="col-12 col-lg-3 mb-2">
+                    <label id="label_form" for="bairro" class="control-label">Bairro</label>
+                    <input type="text" class="form-control" name="bairro" value="{{ old('bairro') }}" required="required">
                 </div>
 
                 <div class="col-12 col-lg-3 mb-2">

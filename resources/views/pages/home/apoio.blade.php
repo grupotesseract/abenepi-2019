@@ -31,9 +31,9 @@
 		</div>
 
 		<div class="col-12 col-lg-4">
-			<a href="https://wakeditora.com.br/" target="_blank">
+			<a href="https://www.brinktrok.com.br/" target="_blank">
 				<div class="logo">
-					<img src="https://res.cloudinary.com/tesseract/image/upload/v1550819590/abenepi-2019/wak.png">
+					<img src="https://res.cloudinary.com/tesseract/image/upload/v1551195108/abenepi-2019/brink-trok.png">
 				</div>
 			</a>
 		</div>

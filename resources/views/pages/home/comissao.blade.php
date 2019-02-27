@@ -6,11 +6,20 @@
 
     <p align="right">Dra. Tais de Lima Ferreira Mattar</p>
     <p align="right">Coordenadora do Núcleo São Carlos da ABENEPI</p>
-</p>
 
-    <div class="text-center col-12 mt-5 mb-5">
-        <a href="https://drive.google.com/file/d/1KNyGWkkKWGSbvCHH0Zt-gVmNQnm5cWg5/view?usp=sharing" target="_blank">
-            <button type="button" class="btn btn-primary"><i class="fas fa-arrow-circle-down"></i> Comissão Organizadora</button>
-        </a>
+    <div class="text-center col-12 mt-5 mb-5" onclick='$(".comissao").css("display", "block");'>
+        <button type="button" class="btn btn-primary"><i class="fas fa-arrow-circle-down"></i> Comissão Organizadora</button>
+    </div>
+
+    <div class="comissao text-center col-12 mb-5" style="display: none;">
+        <h4>Núcleo São Carlos - ABENEPI<h4>
+        <h4>Dra. Tais de Uma Ferreira Mattar</h4>
+        <h4>Ana Cristina Roma Corsini</h4>
+        <h4>Ms. Thaís Chabaribery</h4>
+        <h4>Dra. Anna Paola V. M. Chiarelli</h4>
+        <h4>Ms. Maira Buonadio Delghingaro</h4>
+        <h4>Ana Flávia Ribeiro</h4>
+        <h4>Cristiane S. Spina</h4>
+        <h4>Silvia R. Falvo</h4>
     </div>
 </div>

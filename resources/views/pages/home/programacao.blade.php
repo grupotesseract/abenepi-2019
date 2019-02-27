@@ -1,7 +1,6 @@
 <div class="container programacao" id="programacao">
 	<h1 class="text-center">Programação</h1>
 	<h3 class="text-center mb-4">18 de Maio (Sábado)</h3>
-	<h5 class="mb-5 text-black-50">A coordenação do evento reserva-se ao direito de trocar o palestrante ou a palestra caso haja algum tipo de impedimento grave por parte do palestrante, que o impossibilite de estar presente no evento. A coordenação do evento trabalhará em prol da manutenção da qualidade do evento.</h5>
 
 	<div class="row">
     <div class="col-12">
@@ -67,5 +66,7 @@
             <button type="button" class="btn btn-primary"><i class="fas fa-arrow-circle-right"></i> Currículo Palestrantes</button>
         </a>
     </div>
+
+		<h5 class="mb-5 text-black-50" style="padding: 0 1rem;">A coordenação do evento reserva-se ao direito de trocar o palestrante ou a palestra caso haja algum tipo de impedimento grave por parte do palestrante, que o impossibilite de estar presente no evento. A coordenação do evento trabalhará em prol da manutenção da qualidade do evento.</h5>
   </div>
 </div>
