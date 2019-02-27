@@ -27,9 +27,10 @@ return [
             'fixed' => env('APP_URL'), // Criar uma rota com este nome
         ],
         'notification' => [
-            'callback' => null, // Callable callback to Notification function (notificationInfo) : void {}
+            'callback' => ['App\Notifications\PagSeguroNotification', 'pagseguro'],
             'credential' => 'default', // Callable resolve credential function (notificationCode) : Credentials {}
-            'fixed' => env('APP_URL'), // Criar uma rota com este nome
+            //'fixed' => env('PAGSEGURO_NOTIFICATION'), // Criar uma rota com este nome
+            'route-name' => 'pagseguro.notification',
         ],
     ],
 
