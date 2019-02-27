@@ -8,8 +8,7 @@
 
 @include('pages.home.programacao')
 
-@include('pages.home.enviotrabalhos')
-
+{{-- @include('pages.home.enviotrabalhos') --}}
 
 @include('pages.home.formulario')
 

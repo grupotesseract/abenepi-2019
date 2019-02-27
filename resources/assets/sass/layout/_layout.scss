@@ -1,6 +1,10 @@
 // Layout -> Regras gerais de layout, como modificar um .container para todo o projeto.
 
 // Navbar
+.navbar {
+	background-color: rgba($primary, .95);
+}
+
 .nav-link {
 	font-weight: 600;
 }
