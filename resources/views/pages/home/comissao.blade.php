@@ -12,7 +12,7 @@
     </div>
 
     <div class="comissao text-center col-12 mb-5" style="display: none;">
-        <h5>Núcleo São Carlos - ABENEPI<h5>
+        <h5><b>Núcleo São Carlos - ABENEPI</b><h5>
         <h5>Dra. Tais de Uma Ferreira Mattar</h5>
         <h5>Ana Cristina Roma Corsini</h5>
         <h5>Ms. Thaís Chabaribery</h5>
@@ -21,5 +21,6 @@
         <h5>Ana Flávia Ribeiro</h5>
         <h5>Cristiane S. Spina</h5>
         <h5>Silvia R. Falvo</h5>
+        <h5>Ms. Estela Manfrin</h5>
     </div>
 </div>
