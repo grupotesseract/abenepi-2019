@@ -13,7 +13,7 @@ class PagSeguroModel extends Model
             'items' => [
                 [
                     'id' => $inscrito->id,
-                    'description' => 'IX CONGRESSO PAULISTA DA ABENEPI',
+                    'description' => 'V SIMPÓSIO DE TRANSTORNOS NEUROPSIQUIÁTRICOS DA INFÂNCIA E DA ADOLESCÊNCIA',
                     'quantity' => '1',
                     'amount' => $inscrito->valor
                 ],

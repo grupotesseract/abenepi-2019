@@ -3578,20 +3578,20 @@
         },
         {
             "name": "yajra/laravel-datatables-buttons",
-            "version": "v3.2.1",
+            "version": "v3.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yajra/laravel-datatables-buttons.git",
-                "reference": "cdf7df773461900791491b1855397b099230b1f8"
+                "reference": "f473e0695c668106665d68f002993a086a8705ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yajra/laravel-datatables-buttons/zipball/cdf7df773461900791491b1855397b099230b1f8",
-                "reference": "cdf7df773461900791491b1855397b099230b1f8",
+                "url": "https://api.github.com/repos/yajra/laravel-datatables-buttons/zipball/f473e0695c668106665d68f002993a086a8705ab",
+                "reference": "f473e0695c668106665d68f002993a086a8705ab",
                 "shasum": ""
             },
             "require": {
-                "illuminate/console": "5.4.*|5.5.*|5.6.*",
+                "illuminate/console": "^5.4",
                 "maatwebsite/excel": "^2.0",
                 "php": ">=7.0",
                 "yajra/laravel-datatables-html": "3.*",
@@ -3638,7 +3638,7 @@
                 "jquery",
                 "laravel"
             ],
-            "time": "2018-02-21T07:00:03+00:00"
+            "time": "2019-01-23T01:11:58+00:00"
         },
         {
             "name": "yajra/laravel-datatables-fractal",

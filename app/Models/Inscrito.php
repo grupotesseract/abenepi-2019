@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use Eloquent as Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * Class Inscrito
@@ -26,8 +25,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property string estado
  */
 class Inscrito extends Model
-{
-    use SoftDeletes;
+{   
 
     public $table = 'inscritos';
 
@@ -53,7 +51,8 @@ class Inscrito extends Model
         'valor',
         'telefone',
         'nascimento',
-        'dia_inscrito'
+        'dia_inscrito',
+        'comprovante'
     ];
 
     /**
@@ -110,6 +109,16 @@ class Inscrito extends Model
         $semPonto = str_replace('.','',$value);
         $this->attributes['cpf'] = $semPonto;
     }*/
+
+    public function getCompareceuAttribute($value)
+    {
+        return ($value ? 'Compareceu' : 'Não Compareceu');
+    }
+
+    public function getPagouAttribute($value)
+    {
+        return ($value ? 'Pagou' : 'Não Pagou');
+    }   
 
 
 }
