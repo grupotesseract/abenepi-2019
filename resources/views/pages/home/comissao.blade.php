@@ -12,14 +12,14 @@
     </div>
 
     <div class="comissao text-center col-12 mb-5" style="display: none;">
-        <h4>Núcleo São Carlos - ABENEPI<h4>
-        <h4>Dra. Tais de Uma Ferreira Mattar</h4>
-        <h4>Ana Cristina Roma Corsini</h4>
-        <h4>Ms. Thaís Chabaribery</h4>
-        <h4>Dra. Anna Paola V. M. Chiarelli</h4>
-        <h4>Ms. Maira Buonadio Delghingaro</h4>
-        <h4>Ana Flávia Ribeiro</h4>
-        <h4>Cristiane S. Spina</h4>
-        <h4>Silvia R. Falvo</h4>
+        <h5>Núcleo São Carlos - ABENEPI<h5>
+        <h5>Dra. Tais de Uma Ferreira Mattar</h5>
+        <h5>Ana Cristina Roma Corsini</h5>
+        <h5>Ms. Thaís Chabaribery</h5>
+        <h5>Dra. Anna Paola V. M. Chiarelli</h5>
+        <h5>Ms. Maira Buonadio Delghingaro</h5>
+        <h5>Ana Flávia Ribeiro</h5>
+        <h5>Cristiane S. Spina</h5>
+        <h5>Silvia R. Falvo</h5>
     </div>
 </div>
