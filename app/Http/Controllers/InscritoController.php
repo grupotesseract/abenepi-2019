@@ -180,16 +180,21 @@ class InscritoController extends AppBaseController
 
     public function emissaoPagamento (Request $request)
     {
+        
         $input = $request->all();
+        
         $inscrito = $this->inscritoRepository->findWhere(['cpf' => $input['cpf']])->first();
-
+        
         if ($inscrito)
-        {
+        {            
             $pagSeguro = PagSeguroModel::confirmaPagamento($inscrito);
             return redirect($pagSeguro);
         }
-        else
+        else {
             Flash::success('Favor, verifique seu CPF');
+            return redirect()->back();
+        }
+            
     }
 
     public function atualizaPagou($id)
