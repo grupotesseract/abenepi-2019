@@ -200,9 +200,9 @@
 
     <p>Em caso de dúvidas, entrar em contato com o email: <span>saocarlosabenepi@gmail.com</span></p>
 
-    {{-- <h1 class="text-center mb-4">Gerar Nova Guia de Pagamento</h1> --}}
+    <h1 class="text-center mb-4">Gerar Nova Guia de Pagamento</h1>
 
-    {{--  <form action="{{url('/emissaoPagamento')}}" method="post">
+    <form action="{{url('/emissaoPagamento')}}" method="post">
         @csrf
 
         @if ($errors->any())
@@ -229,7 +229,7 @@
                 <div class="text-center col-12 mt-3 mb-5">
                     <button type="submit" class="btn btn-default">Gerar Pagamento</button>
                 </div>
-            </div>{{-- End Row
-        </div>{{-- End Form-Group 
-    </form> --}}
+            </div>
+        </div>
+    </form> 
 </div>
