@@ -69,6 +69,8 @@ class PagSeguroNotification extends Notification
      */
     public static function pagseguro($information)
     {
+        Log::info(print_r($information, true));
+
         \Log::info('Chamada POST do PagSeguro feita com sucesso. Depurando informações');
         $response = PagSeguroNotification::setResponse($information);        
         \Log::info('Transação de '.$response['name'].' foi '.$response['status_transacao']);        
