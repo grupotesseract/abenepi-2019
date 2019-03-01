@@ -69,6 +69,8 @@ class PagSeguroNotification extends Notification
      */
     public static function pagseguro($information)
     {
+        \Log::info(print_r($information, true));
+
         \Log::info('Chamada POST do PagSeguro feita com sucesso. Depurando informações');
         $response = PagSeguroNotification::setResponse($information);        
         \Log::info('Transação de '.$response['name'].' foi '.$response['status_transacao']);        
@@ -82,7 +84,7 @@ class PagSeguroNotification extends Notification
     public static function setResponse($information)
     {
         \Log::info('Início depuração 1');
-        \Log::info($information);
+        
         $status_transacao = strtolower($information->getStatus()->getName());
         \Log::info('Início depuração 2');
         $sender = $information->getSender();
@@ -97,6 +99,8 @@ class PagSeguroNotification extends Notification
             'email' => $email,
             'name' => $name,
         ];
+
+        \Log::info($response['name']);
         \Log::info('Início depuração 6');
 
         \Log::info('Início depuração 7');
