@@ -82,7 +82,7 @@ class PagSeguroNotification extends Notification
     public static function setResponse($information)
     {
         \Log::info('Início depuração 1');
-        \Log::info($information);
+        
         $status_transacao = strtolower($information->getStatus()->getName());
         \Log::info('Início depuração 2');
         $sender = $information->getSender();
@@ -97,6 +97,8 @@ class PagSeguroNotification extends Notification
             'email' => $email,
             'name' => $name,
         ];
+
+        \Log::info($response['name']);
         \Log::info('Início depuração 6');
 
         \Log::info('Início depuração 7');
