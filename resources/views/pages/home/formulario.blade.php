@@ -144,8 +144,8 @@
                 </div>
 
                 <div class="col-12 mb-2">
-                    <label id="label_form" for="telefone" class="control-label">Telefone</label>
-                  <input type="text" class="form-control" maxlength="14" placeholder="(14)91234-5678" name="telefone" value="{{ old('telefone') }}" required="required">
+                    <label id="label_form" for="telefone" class="control-label">Celular</label>
+                  <input type="text" class="form-control" maxlength="14" data-mask='(00)000000000' placeholder="(14)91234-5678" name="telefone" value="{{ old('telefone') }}" required="required">
                 </div>
 
                 <div class="col-12 col-lg-6 mb-2">
