@@ -92,7 +92,7 @@ return [
     'not_regex'            => 'The :attribute format is invalid.',
     'numeric'              => 'The :attribute must be a number.',
     'present'              => 'The :attribute field must be present.',
-    'regex'                => 'The :attribute format is invalid.',
+    'regex'                => 'O formato do valor inserido em :attribute está incorreto',
     'required'             => 'O campo :attribute é obrigatório.',
     'required_if'          => 'The :attribute field is required when :other is :value.',
     'required_unless'      => 'The :attribute field is required unless :other is in :values.',
@@ -111,7 +111,7 @@ return [
     'timezone'             => 'The :attribute must be a valid zone.',
     'unique'               => 'O valor em :attribute já está sendo usado. Favor emitir uma nova guia de pagamento abaixo, ou entrar em contato com a organização do evento',
     'uploaded'             => 'The :attribute failed to upload.',
-    'url'                  => 'The :attribute format is invalid.',
+    'url'                  => 'The :attribute format is invalid.', 
 
     /*
     |--------------------------------------------------------------------------

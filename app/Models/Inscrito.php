@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Eloquent as Model;
 
+
 /**
  * Class Inscrito
  * @package App\Models
@@ -93,13 +94,13 @@ class Inscrito extends Model
         'endereco' => 'required',
         'bairro' => 'required',
         'numero' => 'required',
-        'cep' => 'required',
+        'cep' => 'required|regex:/^[0-9]{5}-[0-9]{3}$/',
         'email' => 'required',
         'senha' => 'required',
         'cidade' => 'required',
         'estado' => 'required',
         'valor' => 'required',
-        'telefone' => 'required',
+        'telefone' => 'required|regex:/\(?\d{2}\)?\s?\d{5}\-?\d{4}/',
         'nascimento' => 'required'
     ];
 
