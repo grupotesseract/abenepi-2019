@@ -171,6 +171,7 @@ return [
         laravel\pagseguro\Platform\Laravel5\ServiceProvider::class,
         Yajra\DataTables\DataTablesServiceProvider::class,
         Yajra\DataTables\ButtonsServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
     ],
 
     /*
@@ -223,7 +224,8 @@ return [
         'Form'      => Collective\Html\FormFacade::class,
         'Html'      => Collective\Html\HtmlFacade::class,
         'Flash'     => Laracasts\Flash\Flash::class,
-        'PagSeguro' => laravel\pagseguro\Platform\Laravel5\PagSeguro::class
+        'PagSeguro' => laravel\pagseguro\Platform\Laravel5\PagSeguro::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class
 
     ],
 
