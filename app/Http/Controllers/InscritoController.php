@@ -6,6 +6,7 @@ use App\DataTables\InscritoDataTable;
 use App\Http\Requests;
 use App\Http\Requests\CreateInscritoRequest;
 use App\Http\Requests\UpdateInscritoRequest;
+use App\Http\Requests\DownloadCertificadoRequest;
 use App\Repositories\InscritoRepository;
 use Flash;
 use App\Http\Controllers\AppBaseController;
@@ -246,5 +247,26 @@ class InscritoController extends AppBaseController
             Flash::error('Inscrito não possui comprovante inserido');
             return redirect(route('inscritos.index'));
         }
+    }
+
+    /**
+     * Verifica se o CPF é valido e pertence a um Inscrito.
+     * Retorna o Certificado do Inscrito.
+     *
+     * @param DownloadCertificadoRequest $request
+     *
+     * @return Response
+     */
+    public function downloadCertificado(DownloadCertificadoRequest $request)
+    {
+        $input = $request->all();
+
+        $cpf = str_replace(['.', '-'], '', $input['cpf']);
+
+        $inscrito = $this->inscritoRepository->findByField('cpf', $cpf)->first();
+
+        dd($inscrito->nome);
+
+        return redirect(route('home'));
     }
 }

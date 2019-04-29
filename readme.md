@@ -24,7 +24,7 @@ cp .env.example .env
 ./vessel start
 ./vessel composer install
 ./vessel artisan key:generate
-./vessel artisan migrate
+./vessel artisan migrate --seed
 
 # Prepare de Assets
 ./vessel yarn install
