@@ -269,7 +269,7 @@ class InscritoController extends AppBaseController
         $data = ['nome' => $inscrito->nome];
         $pdf = PDF::loadView('pages.certificado', $data)->setPaper('a4', 'landscape');
   
-        // return $pdf->download('certificado-abenepi.pdf');
-        return $pdf->stream();
+        return $pdf->download('certificado-abenepi.pdf');
+        // return $pdf->stream();
     }
 }
