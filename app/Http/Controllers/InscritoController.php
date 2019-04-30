@@ -9,6 +9,7 @@ use App\Http\Requests\UpdateInscritoRequest;
 use App\Http\Requests\DownloadCertificadoRequest;
 use App\Repositories\InscritoRepository;
 use Flash;
+use PDF;
 use App\Http\Controllers\AppBaseController;
 use Response;
 use Illuminate\Http\Request;
@@ -264,9 +265,11 @@ class InscritoController extends AppBaseController
         $cpf = str_replace(['.', '-'], '', $input['cpf']);
 
         $inscrito = $this->inscritoRepository->findByField('cpf', $cpf)->first();
-
-        dd($inscrito->nome);
-
-        return redirect(route('home'));
+        
+        $data = ['nome' => $inscrito->nome];
+        $pdf = PDF::loadView('pages.certificado', $data)->setPaper('a4', 'landscape');
+  
+        // return $pdf->download('certificado-abenepi.pdf');
+        return $pdf->stream();
     }
 }
