@@ -67,7 +67,8 @@ class InscritoDataTable extends DataTable
         return [
             'nome',
             'compareceu',
-            'pagou',          
+            'pagou',   
+            'email'       
         ];
     }
 
