@@ -10,7 +10,7 @@
 
 {{-- @include('pages.home.enviotrabalhos') --}}
 
-@include('pages.home.formulario')
+{{-- @include('pages.home.formulario') --}}
 
 @include('pages.home.infraestrutura')
 
