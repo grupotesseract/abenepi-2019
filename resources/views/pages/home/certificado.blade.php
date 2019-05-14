@@ -1,4 +1,6 @@
 <div class="container formulario" id="certificado">
+  @include('flash::message')
+  
   <h1 class="text-center mb-4">Emissão de Certificado</h1>
 
   <form action="{{url('/downloadCertificado')}}" method="post" enctype="multipart/form-data">

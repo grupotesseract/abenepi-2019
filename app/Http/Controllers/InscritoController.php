@@ -262,14 +262,26 @@ class InscritoController extends AppBaseController
     {
         $input = $request->all();
 
-        $cpf = str_replace(['.', '-'], '', $input['cpf']);
+        $cpf = $input['cpf'];
 
-        $inscrito = $this->inscritoRepository->findByField('cpf', $cpf)->first();
+        $inscrito = $this->inscritoRepository->findWhere(
+            [
+                'cpf' => $cpf, 
+                'pagou' => true, 
+                'compareceu' => true
+            ]
+        )->first();
         
-        $data = ['nome' => $inscrito->nome];
-        $pdf = PDF::loadView('pages.certificado', $data)->setPaper('a4', 'landscape');
-  
-        return $pdf->download('certificado-abenepi.pdf');
-        // return $pdf->stream();
+        if ($inscrito) {
+            $data = ['nome' => $inscrito->nome];
+            $pdf = PDF::loadView('pages.certificado', $data)->setPaper('a4', 'landscape');
+    
+            return $pdf->download('certificado-abenepi.pdf');
+            // return $pdf->stream();
+        } else {
+            Flash::error('CPF não encontrado');
+            return redirect()->back();
+        }
+
     }
 }
