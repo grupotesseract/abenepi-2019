@@ -56,7 +56,7 @@
   <h1 class="mb-2">DA INFÂNCIA E DA ADOLESCÊNCIA</h1>
 
   <h3>Certifico que <b>{{ $nome }}</b></h3>
-  <h3>realizou o IV Simpósio de Transtornos</h3>
+  <h3>realizou o V Simpósio de Transtornos</h3>
   <h3>Neuropsiquiátricos da Infância e da Adolescência,</h3>
   <h3>realizado no dia 18 de Maio de 2019, das 8h às 18h</h3>
   <h3>no Hotel Nacional Inn , promovido pelo</h3>
