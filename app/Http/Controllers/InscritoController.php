@@ -6,8 +6,10 @@ use App\DataTables\InscritoDataTable;
 use App\Http\Requests;
 use App\Http\Requests\CreateInscritoRequest;
 use App\Http\Requests\UpdateInscritoRequest;
+use App\Http\Requests\DownloadCertificadoRequest;
 use App\Repositories\InscritoRepository;
 use Flash;
+use PDF;
 use App\Http\Controllers\AppBaseController;
 use Response;
 use Illuminate\Http\Request;
@@ -246,5 +248,40 @@ class InscritoController extends AppBaseController
             Flash::error('Inscrito não possui comprovante inserido');
             return redirect(route('inscritos.index'));
         }
+    }
+
+    /**
+     * Verifica se o CPF é valido e pertence a um Inscrito.
+     * Retorna o Certificado do Inscrito.
+     *
+     * @param DownloadCertificadoRequest $request
+     *
+     * @return Response
+     */
+    public function downloadCertificado(DownloadCertificadoRequest $request)
+    {
+        $input = $request->all();
+
+        $cpf = $input['cpf'];
+
+        $inscrito = $this->inscritoRepository->findWhere(
+            [
+                'cpf' => $cpf, 
+                'pagou' => true, 
+                'compareceu' => true
+            ]
+        )->first();
+        
+        if ($inscrito) {
+            $data = ['nome' => $inscrito->nome];
+            $pdf = PDF::loadView('pages.certificado', $data)->setPaper('a4', 'landscape');
+    
+            return $pdf->download('certificado-abenepi.pdf');
+            // return $pdf->stream();
+        } else {
+            Flash::error('CPF não encontrado');
+            return redirect()->back();
+        }
+
     }
 }

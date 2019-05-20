@@ -12,6 +12,8 @@
 
 {{-- @include('pages.home.formulario') --}}
 
+@include('pages.home.certificado')
+
 @include('pages.home.infraestrutura')
 
 @include('pages.home.apoio')

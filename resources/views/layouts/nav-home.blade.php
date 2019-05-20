@@ -19,7 +19,7 @@
           <a class="nav-link smooth-scroll" href="#formulario">Inscrições</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link smooth-scroll" href="/">Certificados</a>
+          <a class="nav-link smooth-scroll" href="#certificado">Certificado</a>
         </li>
         <li class="nav-item">
           <a class="nav-link smooth-scroll" href="#infraestrutura">Infraestrutura</a>
